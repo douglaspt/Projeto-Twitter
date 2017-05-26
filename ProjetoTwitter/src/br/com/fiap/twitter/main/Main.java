@@ -12,6 +12,8 @@ import twitter4j.Twitter;
 public class Main {
 	public static void main(String[] args) {
 
+		
+		//comentario para testar commit no git
 		Twitter twitter = ConfiguraAcesso.iniciaTwitter();
 
 		LocalDateTime dataInicial = LocalDateTime.now().minusDays(7);
@@ -23,7 +25,7 @@ public class Main {
 		System.out.println(dataFinal.format(formatador));
 
 		Query query = new Query("#java");
-		// query.setCount(100);
+		query.setCount(100);
 		query.setSince(dataInicial.format(formatador));
 		query.setUntil(dataFinal.format(formatador));
 		try {
